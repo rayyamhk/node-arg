@@ -63,9 +63,3 @@ class ArgumentParser {
 }
 
 module.exports = ArgumentParser;
-
-const parser = new ArgumentParser();
-
-parser.add_argument('--test', { type: 'number', default: 12 });
-const args = parser.parse_args();
-console.log(args);
