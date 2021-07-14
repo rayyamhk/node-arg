@@ -1,0 +1,23 @@
+{
+  "name": "node-arg",
+  "version": "1.0.0",
+  "author": "Ray Yam",
+  "contributors": [],
+  "description": "A python-like argparser for node.js",
+  "keywords": [
+    "argument",
+    "command",
+    "cli",
+    "argparser",
+    "parser",
+    "python"
+  ],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {}
+}
