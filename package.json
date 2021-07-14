@@ -12,12 +12,14 @@
     "parser",
     "python"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/rayyamhk/node-arg/",
+  "bugs": {
+    "url": "https://github.com/rayyamhk/node-arg/issues"
+  },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/rayyamhk/node-arg/"
   },
   "license": "MIT",
-  "main": "index.js",
-  "scripts": {}
+  "main": "index.js"
 }
