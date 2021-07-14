@@ -12,7 +12,7 @@ class ArgumentParser {
     if (typeof arg !== 'string' || !this.argRegex.test(arg)) {
       throw new Error(`Invalid argument: ${arg}`);
     }
-    const { type, default: defaultValue, help = '' } = opt;
+    const { type, default: defaultValue } = opt;
     
     if (type && !['string', 'boolean', 'number'].includes(type)) {
       throw new Error(`Invalid type value: ${type}`);
@@ -20,11 +20,8 @@ class ArgumentParser {
     if (type && defaultValue && typeof defaultValue !== type) {
       throw new Error(`Invalid type of default value: ${defaultValue}`);
     }
-    if (help && typeof help !== 'string') {
-      throw new Error(`Invalid type of help message: ${help}`);
-    }
     arg = this._parseArgument(arg);
-    this.meta[arg] = { type, default: defaultValue, help };
+    this.meta[arg] = { type, default: defaultValue };
     this.args[arg] = defaultValue;
   }
 
@@ -66,3 +63,9 @@ class ArgumentParser {
 }
 
 module.exports = ArgumentParser;
+
+const parser = new ArgumentParser();
+
+parser.add_argument('--test', { type: 'number', default: 12 });
+const args = parser.parse_args();
+console.log(args);
